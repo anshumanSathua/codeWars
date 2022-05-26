@@ -1,10 +1,16 @@
-/*********************************************
- * Complete the solution so that it reverses the string passed into it.
+/*******************
+ * 
+ * We need a function that can transform a number into a string.
 
-'world'  =>  'dlrow'
-'word'   =>  'drow'
- ******************/
+What ways of achieving this do you know?
 
-function solution(str){
-    return str.split("").reverse().join("");
-  }
+Examples:
+123 --> "123"
+999 --> "999"
+ * 
+ */
+
+function numberToString(num) {
+  // Return a string of the number here!
+  return num.toString();
+}

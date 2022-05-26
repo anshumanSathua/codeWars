@@ -1,42 +1,27 @@
-/*********************
+/***********************
  * 
- * Our football team finished the championship. The result of each match look like "x:y". Results of all matches are recorded in the collection.
+ * Task
+Given an integral number, determine if it's a square number:
 
-For example: ["3:1", "2:2", "0:1", ...]
+In mathematics, a square number or perfect square is an integer that is the square of an integer; in other words, it is the product of some integer with itself.
 
-Write a function that takes such collection and counts the points of our team in the championship. Rules for counting points for each match:
+The tests will always use some integral number, so don't worry about that in dynamic typed languages.
 
-if x > y: 3 points
-if x < y: 0 point
-if x = y: 1 point
-Notes:
-
-there are 10 matches in the championship
-0 <= x <= 4
-0 <= y <= 4
-
+Examples
+-1  =>  false
+ 0  =>  true
+ 3  =>  false
+ 4  =>  true
+25  =>  true
+26  =>  false
  * 
  */
 
-//solution 1
-function points(games) {
-  let p = 0;
-  for (let i = 0; i < games.length; i++) {
-    let a = games[i].split(":");
-    if (a[0] > a[1]) {
-      p += 3;
-    } else if (a[0] == a[1]) {
-      p += 1;
-    } else {
-      p += 0;
-    }
+var isSquare = function (n) {
+  if (n >= 0) {
+    const a = Math.floor(Math.sqrt(n));
+    return a * a === n;
+  } else {
+    return false;
   }
-  return p;
-}
-
-//s2
-const points = (games) =>
-  games.reduce((output, current) => {
-    return (output +=
-      current[0] > current[2] ? 3 : current[0] === current[2] ? 1 : 0);
-  }, 0);
+};

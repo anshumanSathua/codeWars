@@ -1,20 +1,22 @@
-/*****************
+/*************************
  * 
- * ATM machines allow 4 or 6 digit PIN codes and PIN codes cannot contain anything but exactly 4 digits or exactly 6 digits.
+ * Given two integers a and b, which can be positive or negative, find the sum of all the integers between and including them and return it. If the two numbers are equal return a or b.
 
-If the function is passed a valid PIN string, return true, else return false.
+Note: a and b are not ordered!
 
-Examples (Input --> Output)
-"1234"   -->  true
-"12345"  -->  false
-"a234"   -->  false
+Examples (a, b) --> output (explanation)
+(1, 0) --> 1 (1 + 0 = 1)
+(1, 2) --> 3 (1 + 2 = 3)
+(0, 1) --> 1 (0 + 1 = 1)
+(1, 1) --> 1 (1 since both are same)
+(-1, 0) --> -1 (-1 + 0 = -1)
+(-1, 2) --> 2 (-1 + 0 + 1 + 2 = 2)
  * 
  */
 
-function validatePIN (pin) {
-  
-    pin = [...pin];
-    return pin.every(x => ['0','1','2','3','4','5','6','7','8','9'].includes(x)) &&
-      [4,6].some(y=> pin.length === y);
-  
+function getSum(a, b) {
+  //Good luck!
+  const n = Math.abs(a - b) + 1;
+  const sum = (n * (a + b)) / 2;
+  return sum;
 }

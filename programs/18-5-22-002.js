@@ -1,13 +1,24 @@
-/*************************************
- * Complete the solution so that it returns true if the first argument(string) passed in ends with the 2nd argument (also a string).
+/************************
+ * 
+ * Create a function with two arguments that will return an array of the first (n) multiples of (x).
+
+Assume both the given number and the number of times to count will be positive numbers greater than 0.
+
+Return the results as an array (or list in Python, Haskell or Elixir).
 
 Examples:
 
-solution('abc', 'bc') // returns true
-solution('abc', 'd') // returns false
- ****************************************/
+countBy(1,10) === [1,2,3,4,5,6,7,8,9,10]
+countBy(2,5) === [2,4,6,8,10]
+ * 
+ */
 
-function solution(str, ending){
-    // TODO: complete
-    return str.endsWith(ending);
+function countBy(x, n) {
+  let z = [];
+  let a = 0;
+  for (let i = 0; i < n; i++) {
+    a += x;
+    z.push(a);
   }
+  return z;
+}

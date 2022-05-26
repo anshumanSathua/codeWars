@@ -1,24 +1,15 @@
-/*************************
+/********************
  * 
- * Given two integers a and b, which can be positive or negative, find the sum of all the integers between and including them and return it. If the two numbers are equal return a or b.
+ * Complete the square sum function so that it squares each number passed into it and then sums the results together.
 
-Note: a and b are not ordered!
-
-Examples (a, b) --> output (explanation)
-(1, 0) --> 1 (1 + 0 = 1)
-(1, 2) --> 3 (1 + 2 = 3)
-(0, 1) --> 1 (0 + 1 = 1)
-(1, 1) --> 1 (1 since both are same)
-(-1, 0) --> -1 (-1 + 0 = -1)
-(-1, 2) --> 2 (-1 + 0 + 1 + 2 = 2)
+For example, for [1, 2, 2] it should return 9 because 1^2 + 2^2 + 2^2 = 9.
  * 
  */
 
-function getSum( a,b )
-{
-   //Good luck!
-    const n = Math.abs(a-b)+1;
-    const sum = (n*(a+b))/2;
-    return sum;
-  
+function squareSum(numbers) {
+  let sum = 0;
+  numbers.forEach((number) => {
+    sum += number * number;
+  });
+  return sum;
 }

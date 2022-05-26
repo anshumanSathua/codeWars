@@ -1,28 +1,17 @@
-/***************
- * 
- * Check to see if a string has the same amount of 'x's and 'o's. The method must return a boolean and be case insensitive. The string can contain any char.
+/**************************
+ * Build a function that returns an array of integers from n to 1 where n>0.
 
-Examples input/output:
+Example : n=5 --> [5,4,3,2,1]
 
-XO("ooxx") => true
-XO("xooxx") => false
-XO("ooxXm") => true
-XO("zpzpzpp") => true // when no 'x' and 'o' is present should return true
-XO("zzoo") => false
 
  * 
- */
+********************* */
 
-function XO(str) {
-    let x = 0,
-        o = 0;
-
-    for (let i = 0; i < str.length; i++) { 
-        if (str[i].toLowerCase() === "x") {
-            x++;
-        } else if (str[i].toLowerCase() === "o") {
-            o++;
-        }
-    }
-    return x === o;
-}
+const reverseSeq = (n) => {
+  const arr = [];
+  while (n >= 1) {
+    arr.push(n);
+    n--;
+  }
+  return arr;
+};

@@ -1,17 +1,20 @@
-/**************************
- * Build a function that returns an array of integers from n to 1 where n>0.
-
-Example : n=5 --> [5,4,3,2,1]
-
-
+/*******************
  * 
-********************* */
+ * Introduction
+The first century spans from the year 1 up to and including the year 100, the second century - from the year 101 up to and including the year 200, etc.
 
-const reverseSeq = n => {
-    const arr = [];
-    while(n >= 1){
-      arr.push(n);
-      n--;
-    }
-    return arr;
-  };
+Task
+Given a year, return the century it is in.
+
+Examples
+1705 --> 18
+1900 --> 19
+1601 --> 17
+2000 --> 20
+ * 
+ */
+
+function century(year) {
+  // Finish this :)
+  return Math.floor((year - 1) / 100) + 1;
+}

@@ -1,26 +1,16 @@
 /********************
- * 
- * Create a function which answers the question "Are you playing banjo?".
-If your name starts with the letter "R" or lower case "r", you are playing banjo!
+Given the triangle of consecutive odd numbers:
 
-The function takes a name as its only argument, and returns one of the following strings:
+             1
+          3     5
+       7     9    11
+   13    15    17    19
+21    23    25    27    29
+...
+Calculate the sum of the numbers in the nth row of this triangle (starting at index 1) e.g.: (Input --> Output)
 
-name + " plays banjo" 
-name + " does not play banjo"
- * 
- */
+1 -->  1
+2 --> 3 + 5 = 8
 
-//s1
-const areYouPlayingBanjo = (name) =>
-  name.toLowerCase()[0] === "r"
-    ? `${name} plays banjo`
-    : `${name} does not play banjo`;
-
-//s2
-function areYouPlayingBanjo(name) {
-  return (
-    name +
-    (name[0].toLowerCase() == "r" ? " plays" : " does not play") +
-    " banjo"
-  );
-}
+*/
+const rowSumOddNumbers = (n) => Math.pow(n, 3);

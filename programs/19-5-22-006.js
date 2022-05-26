@@ -1,24 +1,23 @@
-/**********************
+/*****************
  * 
- * Jaden Smith, the son of Will Smith, is the star of films such as The Karate Kid (2010) and After Earth (2013). Jaden is also known for some of his philosophy that he delivers via Twitter. When writing on Twitter, he is known for almost always capitalizing every word. For simplicity, you'll have to capitalize each word, check out how contractions are expected to be in the example below.
+ * Introduction
+The first century spans from the year 1 up to and including the year 100, the second century - from the year 101 up to and including the year 200, etc.
 
-Your task is to convert strings to how they would be written by Jaden Smith. The strings are actual quotes from Jaden Smith, but they are not capitalized in the same way he originally typed them.
+Task
+Given a year, return the century it is in.
 
-Example:
-
-Not Jaden-Cased: "How can mirrors be real if our eyes aren't real"
-Jaden-Cased:     "How Can Mirrors Be Real If Our Eyes Aren't Real"
+Examples
+1705 --> 18
+1900 --> 19
+1601 --> 17
+2000 --> 20
  * 
  */
 
-String.prototype.toJadenCase = function () {
-    
-    let res = [];
-    const arr = this.toLowerCase().split(' ');
-    
-    for(let i = 0; i < arr.length; i++){
-      let ele = arr[i];
-      res.push(ele[0].toUpperCase()+ele.slice(1));
-    }
-    return res.join(' ');
-  };
+function squareSum(numbers) {
+  let sum = 0;
+  numbers.forEach((number) => {
+    sum += number * number;
+  });
+  return sum;
+}

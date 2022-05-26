@@ -1,28 +1,13 @@
-/***********************
- * 
- * Task
-Given an integral number, determine if it's a square number:
+/*************************************
+ * Complete the solution so that it returns true if the first argument(string) passed in ends with the 2nd argument (also a string).
 
-In mathematics, a square number or perfect square is an integer that is the square of an integer; in other words, it is the product of some integer with itself.
+Examples:
 
-The tests will always use some integral number, so don't worry about that in dynamic typed languages.
+solution('abc', 'bc') // returns true
+solution('abc', 'd') // returns false
+ ****************************************/
 
-Examples
--1  =>  false
- 0  =>  true
- 3  =>  false
- 4  =>  true
-25  =>  true
-26  =>  false
- * 
- */
-
-var isSquare = function(n){
-    if(n >= 0){
-      const a = Math.floor(Math.sqrt(n));
-      return a*a === n;
-    }
-    else{
-      return false;
-    }
-  }
+function solution(str, ending) {
+  // TODO: complete
+  return str.endsWith(ending);
+}

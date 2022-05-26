@@ -1,21 +1,17 @@
-/***********
+/****************
  * 
- * Task
-Sum all the numbers of a given array ( cq. list ), except the highest and the lowest element ( by value, not by index! ).
+ * You get an array of numbers, return the sum of all of the positives ones.
 
-The highest or lowest element respectively is a single element at each edge, even if there are more than one with the same value.
+Example [1,-4,7,12] => 1 + 7 + 12 = 20
 
-Mind the input validation.
+Note: if there is nothing to sum, the sum is default to 0.
 
-Example
-{ 6, 2, 1, 8, 10 } => 16
-{ 1, 1, 11, 2, 3 } => 6
+
  * 
  */
 
-//s1
-function sumArray(array) {
-  return array && array.length > 1
-    ? array.reduce((a, b) => a + b, 0) - Math.min(...array) - Math.max(...array)
-    : 0;
+function positiveSum(arr) {
+  return arr.reduce(function (a, b) {
+    return b > 0 ? a + b : a;
+  }, 0);
 }
