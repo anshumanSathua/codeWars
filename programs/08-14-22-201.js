@@ -20,8 +20,8 @@ You can see another examples in the "Sample tests"
  */
 
 //s1
-const meeting = (s) => {
-  return s
+const meeting = (str) => {
+  return str
     .toUpperCase()
     .split(";")
     .map((name) => `(${name.split(":")[1]}, ${name.split(":")[0]})`)
