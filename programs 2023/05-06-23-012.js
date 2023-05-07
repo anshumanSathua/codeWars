@@ -25,7 +25,7 @@ Since the sum of its digits' factorial of 1! + 5! + 0! = 122 is not equal to num
  */
 
 //S1
-const strong = (n) => {
+const strong1 = (n) => {
   const arr = [...(n + "")];
   let sum = 0;
   const factorial = (n) => {
@@ -43,7 +43,7 @@ const strong = (n) => {
 };
 
 //S2
-const strong1 = (n) =>
+const strong2 = (n) =>
   [...String(n)]
     .map((element) => {
       let result = 1;
