@@ -64,7 +64,7 @@ const dirReduc = (arr) => {
 };
 
 //S2
-function dirReduc(plan) {
+const dirReduce = (plan) => {
   var opposite = {
     NORTH: "SOUTH",
     EAST: "WEST",
@@ -76,4 +76,4 @@ function dirReduc(plan) {
     else dirs.push(dir);
     return dirs;
   }, []);
-}
+};
