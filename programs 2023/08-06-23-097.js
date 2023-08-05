@@ -43,3 +43,15 @@ function kebabize(str) {
     .join("")
     .replace(/^-/, "");
 }
+
+//S3
+function kebabize(str) {
+  return str
+    .split("")
+    .filter((x) => x.toUpperCase() != x.toLowerCase())
+    .reduce((acc, curr, i) => {
+      return curr.toUpperCase() == curr && i
+        ? acc + "-" + curr.toLowerCase()
+        : acc + curr.toLowerCase();
+    }, "");
+}
