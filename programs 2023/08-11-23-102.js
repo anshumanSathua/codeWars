@@ -35,7 +35,6 @@ class FileNameExtractor {
   }
 }
 
-//S2
 class FileNameExtractor {
   static extractFileName(dFN) {
     return dFN.slice(dFN.indexOf("_") + 1, dFN.lastIndexOf("."));
