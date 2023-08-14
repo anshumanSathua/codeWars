@@ -18,3 +18,15 @@ Object.defineProperty(Array.prototype, "numberOfOccurrences", {
     return this.filter((item) => item === element).length;
   },
 });
+
+//S2
+Array.prototype.numberOfOccurrences = function (element) {
+  var counter = 0;
+  for (var i = 0; i < this.length; i++) {
+    if (this[i] == element) {
+      counter++;
+    }
+  }
+
+  return counter;
+};
